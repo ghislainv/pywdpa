@@ -34,8 +34,8 @@ setup(name="pywdpa",
                    "Topic :: Scientific/Engineering :: Bio-Informatics"],
       keywords="protected areas wdpa world database on protected areas",
       python_requires=">=2.7",
-      packages=["wdpa"],
-      package_dir={"wdpa": "wdpa"},
+      packages=["pywdpa"],
+      package_dir={"pywdpa": "pywdpa"},
       install_requires=["numpy", "osgeo", "json", "requests", "dotenv"],
       zip_safe=False)
 
