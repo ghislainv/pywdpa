@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `pywdpa` Python package is an interface to the World Database on Protected Areas (WDPA) hosted on the Protected Planet website at <https://www.protectedplanet.net>. The `pywdpa` package provides functions to download shapefiles of protected areas (PA) for any countries with an iso3 code using the WDPA API at <https://api.protectedplanet.net>.
+The `pywdpa` Python package is an interface to the World Database on Protected Areas (WDPA) hosted on the Protected Planet website at <https://www.protectedplanet.net>. The `pywdpa` package provides functions to download shapefiles of protected areas (PA) for any countries with an iso3 code using the WDPA API at <https://api.protectedplanet.net>. The `pywdpa` package translates some functions of the R package `worldpa` (<https://github.com/FRBCesab/worldpa>) in the Python language.
 
 ## Terms and conditions
 
@@ -20,10 +20,14 @@ This package uses the WDPA API to access data on world protected areas. You must
 
 The easiest way to install the `pywdpa` Python package is via [pip](https://pip.pypa.io/en/stable/):
 
-> ~$ pip install --upgrade https://github.com/ghislainv/pywdpa/archive/master.zip
+```
+~$ pip install --upgrade https://github.com/ghislainv/pywdpa/archive/master.zip
+```
 
 but you can also install it executing the `setup.py` file:
 
-> ~$ git clone https://github.com/ghislainv/pywdpa
-> ~$ cd pywdpa
-> ~/pywdpa$ python setup.py install
+```
+~$ git clone https://github.com/ghislainv/pywdpa
+~$ cd pywdpa
+~/pywdpa$ python setup.py install
+```
