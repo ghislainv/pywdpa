@@ -36,7 +36,7 @@ setup(name="pywdpa",
       python_requires=">=2.7",
       packages=["pywdpa"],
       package_dir={"pywdpa": "pywdpa"},
-      install_requires=["numpy", "osgeo", "json", "requests", "dotenv"],
+      install_requires=["numpy", "gdal", "json", "requests", "dotenv"],
       zip_safe=False)
 
 # End
