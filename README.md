@@ -21,7 +21,7 @@ This package uses the WDPA API to access data on world protected areas. You must
 The easiest way to install the `pywdpa` Python package is via [pip](https://pip.pypa.io/en/stable/):
 
 ```
-~$ pip install --upgrade https://github.com/ghislainv/pywdpa/archive/master.zip
+~$ python -m pip install --upgrade https://github.com/ghislainv/pywdpa/archive/master.zip
 ```
 
 but you can also install it executing the `setup.py` file:
