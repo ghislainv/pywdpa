@@ -1,4 +1,4 @@
-[![PyPI version](https://badge.fury.io/py/python-dotenv.svg)](http://badge.fury.io/py/python-dotenv)
+[![PyPI version](https://badge.fury.io/py/pywdpa.svg)](http://badge.fury.io/py/pywdpa)
 
 ![protected-planet](protected-planet.jpg)
 
