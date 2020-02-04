@@ -1,4 +1,8 @@
-# pywdpa Python package
+[![PyPI version](https://badge.fury.io/py/python-dotenv.svg)](http://badge.fury.io/py/python-dotenv)
+
+![protected-planet](protected-planet.jpg)
+
+# `pywdpa` Python package
 
 ## Overview
 
@@ -14,20 +18,29 @@ For further details on terms and conditions of the WDPA usage, please visit the 
 
 ## Prerequisites
 
-This package uses the WDPA API to access data on world protected areas. You must first have obtained a Personal API Token by filling in the form available at <https://api.protectedplanet.net/request>. Then set an environment variable (we recommend using the name `WDPA_KEY`) using either the command `os.environ["WDPA_KEY"]="your_token"` or [python-dotenv](https://github.com/theskumar/python-dotenv).
+This package uses the WDPA API to access data on world protected areas. You must first have obtained a Personal API Token by filling in the form available at <https://api.protectedplanet.net/request>. Then you need to set an environment variable (we recommend using the name `WDPA_KEY`) using either the command `os.environ["WDPA_KEY"]="your_token"` or [python-dotenv](https://github.com/theskumar/python-dotenv).
 
 ## Installation
 
 The easiest way to install the `pywdpa` Python package is via [pip](https://pip.pypa.io/en/stable/):
 
-```
-~$ python -m pip install https://github.com/ghislainv/pywdpa/archive/master.zip
+```shell
+# For version on PyPI
+python -m pip install pywdpa
 ```
 
-but you can also install it executing the `setup.py` file:
+or 
 
+```shell
+# For development version on GitHub
+python -m pip install https://github.com/ghislainv/pywdpa/archive/master.zip
 ```
-~$ git clone https://github.com/ghislainv/pywdpa
-~$ cd pywdpa
-~/pywdpa$ python setup.py install
+
+but you can also install `pywdpa` executing the `setup.py` file:
+
+```shell
+git clone https://github.com/ghislainv/pywdpa
+cd pywdpa
+python setup.py install
 ```
+

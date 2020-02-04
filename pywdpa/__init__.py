@@ -10,7 +10,6 @@
 # ==============================================================================
 
 from __future__ import division, print_function  # Python 3 compatibility
-from . import settings
 from .get_token import get_token
 from .get_wdpa import get_wdpa
 

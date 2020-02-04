@@ -45,7 +45,7 @@ setup(name="pywdpa",
       packages=["pywdpa"],
       package_dir={"pywdpa": "pywdpa"},
       entry_points = {"console_scripts": ["pywdpa = pywdpa.pywdpa:main"]},
-      install_requires=["numpy", "gdal", "requests", "python-dotenv"],
+      install_requires=["numpy", "gdal", "requests"],
       zip_safe=False)
 
 # End
