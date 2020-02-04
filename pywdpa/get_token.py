@@ -57,7 +57,7 @@ def get_token(key="WDPA_KEY"):
                 "2) You stored the value as an environment variable with the recommended name WDPA_KEY.")
 
     if (response.status_code != 200):
-        return "\nSomething go wrong with your API token."
+        return "\nSomething goes wrong with your API token."
 
     return(wdpa_key)
 
