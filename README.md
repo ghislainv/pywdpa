@@ -1,8 +1,9 @@
 [![PyPI version](https://badge.fury.io/py/pywdpa.svg)](http://badge.fury.io/py/pywdpa)
-
-![protected-planet](protected-planet.jpg)
+[![Travis CI](https://api.travis-ci.org/ghislainv/pywdpa.svg?branch=master)](https://travis-ci.org/ghislainv/pywdpa)
 
 # `pywdpa` Python package
+
+![protected-planet](protected-planet.jpg)
 
 ## Overview
 
