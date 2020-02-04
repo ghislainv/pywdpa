@@ -9,10 +9,13 @@
 # license         :GPLv3
 # ==============================================================================
 
-# Import
-from dotenv import load_dotenv
+"""Convenience wrapper for running pywdpa directly from source tree.
+See https://gehrcke.de/2014/02/distributing-a-python-command-line-application/
+"""
 
-# Load .env
-load_dotenv(verbose=True)
+from pywdpa.pywdpa import main
+
+if __name__ == '__main__':
+    main()
 
 # End

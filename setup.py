@@ -10,18 +10,26 @@
 # ==============================================================================
 
 # Import
+import re # Regular expression
 from setuptools import setup
 
+# Version
+version = re.search(
+    '^__version__\s*=\s*"(.*)"',
+    open('pywdpa/pywdpa.py').read(),
+    re.M
+    ).group(1)
+
 # Markdown README file
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+with open("README.md", "rb") as f:
+    long_description = f.read().decode("utf-8")
 
 # Setup
 setup(name="pywdpa",
-      version="0.1",
+      version=version,
       author="Ghislain Vieilledent",
       author_email="ghislain.vieilledent@cirad.fr",
-      url="https://github.com/ghislainv/wdpa",
+      url="https://github.com/ghislainv/pywdpa",
       license="GPLv3",
       description="This is the Python 'pywdpa' package",
       long_description=long_description,
@@ -36,6 +44,7 @@ setup(name="pywdpa",
       python_requires=">=2.7",
       packages=["pywdpa"],
       package_dir={"pywdpa": "pywdpa"},
+      entry_points = {"console_scripts": ["pywdpa = pywdpa.pywdpa:main"]},
       install_requires=["numpy", "gdal", "requests", "python-dotenv"],
       zip_safe=False)
 

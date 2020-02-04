@@ -9,10 +9,12 @@
 # license         :GPLv3
 # ==============================================================================
 
-# Import
-from dotenv import load_dotenv
+"""pywdpa.__main__: executed when pywdpa is called as script."""
 
-# Load .env
-load_dotenv(verbose=True)
+# Import
+from .pywdpa import main
+
+# Execute main()
+main()
 
 # End

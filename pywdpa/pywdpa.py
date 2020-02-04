@@ -9,10 +9,17 @@
 # license         :GPLv3
 # ==============================================================================
 
-# Import
-from dotenv import load_dotenv
+"""pywdpa.pywdpa: provides entry point main()."""
 
-# Load .env
-load_dotenv(verbose=True)
+__version__ = "0.1"
+
+import sys
+from .get_wdpa import get_wdpa
+
+def main():
+    print("Executing pywdpa version %s." % __version__)
+    print("For country with isocode: %s" % sys.argv[1])
+    get_wdpa(sys.argv[1])
+    return None
 
 # End
