@@ -12,7 +12,7 @@ python:
   - "3.6"
   - "3.7"
 install:
-  - pip install gdal==$(gdal-config --version)
+  - pip install gdal==$(gdal-config --version) --include-dirs=/usr/include/gdal/
   - pip install -r requirements.txt
   - pip install .
 script: pytest
