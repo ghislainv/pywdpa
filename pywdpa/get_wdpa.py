@@ -20,7 +20,7 @@ import numpy as np
 
 
 # get_wdpa()
-def get_wdpa(iso3, output_dir):
+def get_wdpa(iso3, output_dir=os.getcwd()):
 
     """This function downloads protected areas for one country using the
     WDPA API.
@@ -54,7 +54,7 @@ def get_wdpa(iso3, output_dir):
     if (pas_count is not None):
 
         # Create the output shapefile
-        output_file = "pa_" + iso3 + ".shp" 
+        output_file = os.path.join(output_dir, "pa_" + iso3 + ".shp")
         driver = ogr.GetDriverByName("ESRI Shapefile")
         if os.path.exists(output_file):
             driver.DeleteDataSource(output_file)
