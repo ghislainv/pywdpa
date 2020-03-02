@@ -9,8 +9,8 @@
 # license         :GPLv3
 # ==============================================================================
 
-"""Convenience wrapper for running pywdpa directly from source tree.
-See https://gehrcke.de/2014/02/distributing-a-python-command-line-application/
+"""
+Convenience wrapper for running pywdpa directly from source tree. See https://gehrcke.de/2014/02/distributing-a-python-command-line-application/.
 """
 
 from pywdpa.pywdpa import main

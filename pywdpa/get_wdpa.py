@@ -20,18 +20,16 @@ import numpy as np
 
 
 # get_wdpa()
-def get_wdpa(iso3, output_dir=os.getcwd()):
+def get_wdpa(iso3, output_dir="."):
 
     """This function downloads protected areas for one country using the
-    WDPA API.
-
-    Protected areas defined by a point are not considered.
+    WDPA API. Protected areas defined by a point are not
+    considered. The shapefile is written on the hard drive (in the
+    current directory).
 
     :param iso3: The ISO-3 code of the country.
-    :param output_dir: Directory used for download.
 
-    :return: None. The shapefile is written on the hard drive
-    (in the current directory).
+    :param output_dir: Directory used for download.
 
     """
 
