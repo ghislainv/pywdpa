@@ -22,19 +22,13 @@ def get_token(key="WDPA_KEY"):
 
     This function checks if the user has stored a valid Protected
     Planet API token as an environment variable file under the
-    key \code{WDPA_KEY}.
+    key "WDPA_KEY".
 
     Before using this package for the first time, the user must follow
     these steps: 
 
-    1. Fill in the form available at
-    <https://api.protectedplanet.net/request> to obtain a personal API
-    token.
-
-    2. Store the token as an environment variable under the key
-    "WDPA_KEY". You can use the command
-    os.environ["WDPA_KEY"]="your_token" or python-dotenv:
-    <https://github.com/theskumar/python-dotenv>.
+    #. Fill in the form available at https://api.protectedplanet.net/request to obtain a personal API token.
+    #. Store the token as an environment variable under the key "WDPA_KEY". You can use the command os.environ["WDPA_KEY"]="your_token" or python-dotenv: https://github.com/theskumar/python-dotenv.
 
     :param key: Environment variable name (recommended name: "WDPA_KEY").
 

@@ -9,7 +9,9 @@
 # license         :GPLv3
 # ==============================================================================
 
-"""pywdpa.pywdpa: provides entry point main()."""
+"""
+pywdpa.pywdpa: provides entry point main().
+"""
 
 __version__ = "0.1.1"
 

@@ -20,8 +20,8 @@ version = re.search(
     re.M
     ).group(1)
 
-# Markdown README file
-with open("README.md", "rb") as f:
+# reStructuredText README file
+with open("README.rst", "rb") as f:
     long_description = f.read().decode("utf-8")
 
 # Setup
