@@ -25,10 +25,13 @@ def get_token(key="WDPA_KEY"):
     key "WDPA_KEY".
 
     Before using this package for the first time, the user must follow
-    these steps: 
+    these steps:
 
-    #. Fill in the form available at https://api.protectedplanet.net/request to obtain a personal API token.
-    #. Store the token as an environment variable under the key "WDPA_KEY". You can use the command os.environ["WDPA_KEY"]="your_token" or python-dotenv: https://github.com/theskumar/python-dotenv.
+    #. Fill in the form available at https://api.protectedplanet.net/request
+    to obtain a personal API token.
+    #. Store the token as an environment variable under the key "WDPA_KEY".
+    You can use the command os.environ["WDPA_KEY"]="your_token" or
+    python-dotenv: https://github.com/theskumar/python-dotenv.
 
     :param key: Environment variable name (recommended name: "WDPA_KEY").
 
@@ -39,20 +42,26 @@ def get_token(key="WDPA_KEY"):
     wdpa_key = os.getenv(key)
 
     if wdpa_key is None:
-        return ("\nMissing WDPA API token. Please ensure that:\n" +
-                "1) You completed this form [https://api.protectedplanet.net/request] to get the token,\n" +
-                "2) You stored the value as an environment variable with the recommended name WDPA_KEY.")
+        msg = ("Missing WDPA API token. Please ensure that:{sep}"
+               "1) You completed this form [https://api.protectedplanet.net/request]"
+               "to get the token.{sep}"
+               "2) You stored the value as an environment variable with the"
+               "recommended name WDPA_KEY.").format(sep="\n")
+        return msg
 
     response = requests.get("https://api.protectedplanet.net/test?token=" + wdpa_key)
 
-    if (response.status_code == 401):
-        return ("\nInvalid WDPA API token. Please ensure that:\n" +
-                "1) You completed this form [https://api.protectedplanet.net/request] to get the token,\n" +
-                "2) You stored the value as an environment variable with the recommended name WDPA_KEY.")
+    if response.status_code == 401:
+        msg = ("Invalid WDPA API token. Please ensure that:{sep}"
+               "1) You completed this form [https://api.protectedplanet.net/request]"
+               "to get the token.{sep}"
+               "2) You stored the value as an environment variable with the"
+               "recommended name WDPA_KEY.").format(sep="\n")
+        return msg
 
-    if (response.status_code != 200):
-        return "\nSomething goes wrong with your API token."
+    if response.status_code != 200:
+        return "Something goes wrong with your API token."
 
-    return(wdpa_key)
+    return wdpa_key
 
 # End
