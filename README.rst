@@ -15,6 +15,7 @@
 
 
 .. image:: protected-planet.jpg
+   :align: center
    :target: protected-planet.jpg
    :alt: protected-planet
 
