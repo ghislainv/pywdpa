@@ -34,14 +34,13 @@ def get_wdpa(iso3, output_dir="."):
     """
 
     os.environ["SHAPE_ENCODING"] = "utf-8"
-    
     base_url = "https://api.protectedplanet.net/"
     category = "v3/countries/"
     wdpa_token = get_token()
     request = base_url + category + iso3 + "?token=" + wdpa_token
     response = requests.get(request)
 
-    if (response.status_code == 404):
+    if response.status_code == 404:
         return "Invalid ISO-3 code"
 
     response = json.loads(response.text) # Equivalent to response.json()
@@ -49,7 +48,7 @@ def get_wdpa(iso3, output_dir="."):
     pas_count = response["country"]["pas_count"]
     pages = list(range(np.int(np.ceil(pas_count / 50.0))))
 
-    if (pas_count is not None):
+    if pas_count is not None:
 
         # Create the output shapefile
         output_file = os.path.join(output_dir, "pa_" + iso3 + ".shp")
@@ -103,7 +102,7 @@ def get_wdpa(iso3, output_dir="."):
                 #     g = g.Buffer(buffer_size)
 
                 # If polygon, add feature
-                if (g.GetGeometryName() == "POLYGON"):
+                if g.GetGeometryName() == "POLYGON":
                     # Create feature with geometry and attributes
                     featureDefn = layer.GetLayerDefn()
                     feature = ogr.Feature(featureDefn)
@@ -121,9 +120,8 @@ def get_wdpa(iso3, output_dir="."):
 
         # Save and close the data source
         ds = None
-        return None
 
     else:
-        return ("The WDPA does not contain any protected areas for " + iso3)
+        return "The WDPA does not contain any protected areas for " + iso3
 
 # End
