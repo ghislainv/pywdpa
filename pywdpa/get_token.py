@@ -43,9 +43,9 @@ def get_token(key="WDPA_KEY"):
 
     if wdpa_key is None:
         msg = ("Missing WDPA API token. Please ensure that:{sep}"
-               "1) You completed this form [https://api.protectedplanet.net/request]"
+               "1) You completed this form [https://api.protectedplanet.net/request] "
                "to get the token.{sep}"
-               "2) You stored the value as an environment variable with the"
+               "2) You stored the value as an environment variable with the "
                "recommended name WDPA_KEY.").format(sep="\n")
         return msg
 
@@ -53,9 +53,9 @@ def get_token(key="WDPA_KEY"):
 
     if response.status_code == 401:
         msg = ("Invalid WDPA API token. Please ensure that:{sep}"
-               "1) You completed this form [https://api.protectedplanet.net/request]"
+               "1) You completed this form [https://api.protectedplanet.net/request] "
                "to get the token.{sep}"
-               "2) You stored the value as an environment variable with the"
+               "2) You stored the value as an environment variable with the "
                "recommended name WDPA_KEY.").format(sep="\n")
         return msg
 

@@ -16,8 +16,8 @@ from pywdpa import get_wdpa
 
 # test_get_wdpa
 def test_get_wdpa():
-  get_wdpa("MDG")
-  f = os.path.isfile("pa_MDG.shp")
-  assert f is True
+    get_wdpa("MDG")
+    f = os.path.isfile("pa_MDG.shp")
+    assert f is True
 
 # End
