@@ -14,8 +14,14 @@
    :target: https://www.gnu.org/licenses/gpl-3.0.html
    :alt: License GPLv3
 
-``pywdpa`` Python package <img src="https://ecology.ghislainv.fr/pywdpa/_static/logo-pywdpa.svg" align="right" alt="" width="120" />
-====================================================================================================================================
+.. |logo| image:: https://ecology.ghislainv.fr/pywdpa/_static/logo-pywdpa.svg
+   :target: https://ecology.ghislainv.fr/pywdpa/_static/logo-pywdpa.svg
+   :alt: Logo pywdpa
+   :width: 120px
+   :align: right
+	 
+``pywdpa`` Python package |logo|
+================================
 
 .. image:: https://ecology.ghislainv.fr/pywdpa/_images/protected-planet.jpg
    :align: center
