@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pywdpa Python package &#8212; pywdpa 0.1.1 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -12,9 +13,10 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/language_data.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="pywdpa package" href="pywdpa.html" />
+    <link rel="next" title="References" href="references.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -32,60 +34,84 @@
           <div class="body" role="main">
             
   <a class="reference external image-reference" href="http://badge.fury.io/py/pywdpa"><img alt="PyPI version" src="https://badge.fury.io/py/pywdpa.svg" /></a>
+<a class="reference external image-reference" href="https://pypi.org/project/pywdpa"><img alt="Python version" src="https://img.shields.io/pypi/pyversions/pywdpa.svg" /></a>
 <a class="reference external image-reference" href="https://travis-ci.org/ghislainv/pywdpa"><img alt="Travis CI" src="https://api.travis-ci.org/ghislainv/pywdpa.svg?branch=master" /></a>
+<a class="reference external image-reference" href="https://www.gnu.org/licenses/gpl-3.0.html"><img alt="License GPLv3" src="https://img.shields.io/badge/licence-GPLv3-8f10cb.svg" /></a>
 <div class="section" id="pywdpa-python-package">
 <h1><code class="docutils literal notranslate"><span class="pre">pywdpa</span></code> Python package<a class="headerlink" href="#pywdpa-python-package" title="Permalink to this headline">¶</a></h1>
-<a class="reference external image-reference" href="protected-planet.jpg"><img alt="protected-planet" src="_images/protected-planet.jpg" /></a>
+<a class="reference external image-reference" href="_images/protected-planet.jpg"><img alt="protected-planet" class="align-center" src="_images/protected-planet.jpg" /></a>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">pywdpa</span></code> Python package is an interface to the World Database on Protected Areas (WDPA) hosted on the Protected Planet website at <a class="reference external" href="https://www.protectedplanet.net">https://www.protectedplanet.net</a>. The <code class="docutils literal notranslate"><span class="pre">pywdpa</span></code> package provides functions to download shapefiles of protected areas (PA) for any countries with an iso3 code using the WDPA API at <a class="reference external" href="https://api.protectedplanet.net">https://api.protectedplanet.net</a>. The <code class="docutils literal notranslate"><span class="pre">pywdpa</span></code> package translates some functions of the R package <code class="docutils literal notranslate"><span class="pre">worldpa</span></code> (<a class="reference external" href="https://github.com/FRBCesab/worldpa">https://github.com/FRBCesab/worldpa</a>) in the Python language.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">pywdpa</span></code> Python package is an interface to the World Database on
+Protected Areas (WDPA) hosted on the Protected Planet website at
+<a class="reference external" href="https://www.protectedplanet.net">https://www.protectedplanet.net</a>. The <code class="docutils literal notranslate"><span class="pre">pywdpa</span></code> package provides
+functions to download shapefiles of protected areas (PA) for any
+countries with an iso3 code using the Protected Planet API at
+<a class="reference external" href="https://api.protectedplanet.net">https://api.protectedplanet.net</a>. The <code class="docutils literal notranslate"><span class="pre">pywdpa</span></code> package
+translates some functions of the R package <code class="docutils literal notranslate"><span class="pre">worldpa</span></code>
+(<a class="reference external" href="https://github.com/FRBCesab/worldpa">https://github.com/FRBCesab/worldpa</a>) in the Python language.</p>
 </div>
 <div class="section" id="terms-and-conditions">
 <h2>Terms and conditions<a class="headerlink" href="#terms-and-conditions" title="Permalink to this headline">¶</a></h2>
-<p>You must ensure that the following citation is always clearly reproduced in any publication or analysis involving the Protected Planet Materials in any derived form or format:</p>
+<p>You must ensure that the following citation is always clearly
+reproduced in any publication or analysis involving the Protected
+Planet Materials in any derived form or format:</p>
 <blockquote>
-<div><p>UNEP-WCMC and IUCN (<code class="docutils literal notranslate"><span class="pre">YEAR</span></code>) Protected Planet: The World Database on Protected Areas (WDPA). Cambridge, UK: UNEP-WCMC and IUCN. Available at: www.protectedplanet.net (dataset downloaded the <code class="docutils literal notranslate"><span class="pre">YEAR/MONTH</span></code>).</p>
+<div><p>UNEP-WCMC and IUCN (<code class="docutils literal notranslate"><span class="pre">YEAR</span></code>) Protected Planet: The World
+Database on Protected Areas (WDPA). Cambridge, UK: UNEP-WCMC and
+IUCN. Available at: www.protectedplanet.net (dataset downloaded the
+<code class="docutils literal notranslate"><span class="pre">YEAR/MONTH</span></code>).</p>
 </div></blockquote>
-<p>For further details on terms and conditions of the WDPA usage, please visit the page: <a class="reference external" href="https://www.protectedplanet.net/c/terms-and-conditions">https://www.protectedplanet.net/c/terms-and-conditions</a>.</p>
+<p>For further details on terms and conditions of the WDPA usage, please
+visit the page:
+<a class="reference external" href="https://www.protectedplanet.net/c/terms-and-conditions">https://www.protectedplanet.net/c/terms-and-conditions</a>.</p>
 </div>
 <div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
-<p>This package uses the WDPA API to access data on world protected areas. You must first have obtained a Personal API Token by filling in the form available at <a class="reference external" href="https://api.protectedplanet.net/request">https://api.protectedplanet.net/request</a>. Then you need to set an environment variable (we recommend using the name <code class="docutils literal notranslate"><span class="pre">WDPA_KEY</span></code>) using either the command <code class="docutils literal notranslate"><span class="pre">os.environ[&quot;WDPA_KEY&quot;]=&quot;your_token&quot;</span></code> or <a class="reference external" href="https://github.com/theskumar/python-dotenv">python-dotenv</a>.</p>
+<p>This package uses the Protected Planet API to access data on world
+protected areas. You must first have obtained a Personal API Token by
+filling in the form available at
+<a class="reference external" href="https://api.protectedplanet.net/request">https://api.protectedplanet.net/request</a>. Then you need to set an
+environment variable (we recommend using the name <code class="docutils literal notranslate"><span class="pre">WDPA_KEY</span></code>)
+using either the command <code class="docutils literal notranslate"><span class="pre">os.environ[&quot;WDPA_KEY&quot;]=&quot;your_token&quot;</span></code> or
+<a class="reference external" href="https://github.com/theskumar/python-dotenv">python-dotenv</a>.</p>
 </div>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>The easiest way to install the <code class="docutils literal notranslate"><span class="pre">pywdpa</span></code> Python package is via <a class="reference external" href="https://pip.pypa.io/en/stable/">pip</a>:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># For version on PyPI</span>
-python -m pip install pywdpa
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="c1"># For version on PyPI</span>
+$ python -m pip install pywdpa
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># For development version on GitHub</span>
-python -m pip install https://github.com/ghislainv/pywdpa/archive/master.zip
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="c1"># For development version on GitHub</span>
+$ python -m pip install https://github.com/ghislainv/pywdpa/archive/master.zip
 </pre></div>
 </div>
 <p>but you can also install <code class="docutils literal notranslate"><span class="pre">pywdpa</span></code> executing the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/ghislainv/pywdpa
-<span class="nb">cd</span> pywdpa
-python setup.py install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/ghislainv/pywdpa
+$ <span class="nb">cd</span> pywdpa
+$ python setup.py install
 </pre></div>
 </div>
+</div>
+<div class="section" id="content">
+<h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="pywdpa.html">pywdpa package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 </ul>
 </div>
 </div>
-</div>
 <div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
+</div>
 </div>
 
 
@@ -95,19 +121,32 @@ python setup.py install
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="#">pywdpa</a></h1>
+<p class="logo">
+  <a href="#">
+    <img class="logo" src="_static/logo-pywdpa.svg" alt="Logo"/>
+    
+  </a>
+</p>
 
 
 
+<p class="blurb">A simple access to world's protected areas</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=ghislainv&repo=pywdpa&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
 
 
 
 
 
 <h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="pywdpa.html">pywdpa package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 </ul>
 
@@ -115,7 +154,7 @@ python setup.py install
 <h3>Related Topics</h3>
 <ul>
   <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="pywdpa.html" title="next chapter">pywdpa package</a></li>
+      <li>Next: <a href="references.html" title="next chapter">References</a></li>
   </ul></li>
 </ul>
 </div>
@@ -145,7 +184,7 @@ python setup.py install
       &copy;2020, Ghislain Vieilledent.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

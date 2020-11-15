@@ -20,9 +20,7 @@
 .. image:: https://img.shields.io/badge/licence-GPLv3-8f10cb.svg
    :target: https://www.gnu.org/licenses/gpl-3.0.html
    :alt: License GPLv3
-	 
-[![Python versions](https://img.shields.io/pypi/pyversions/terracotta.svg)](https://pypi.org/project/terracotta)
-	 
+	 	 
 .. image:: https://ecology.ghislainv.fr/pywdpa/_images/protected-planet.jpg
    :align: center
    :target: https://ecology.ghislainv.fr/pywdpa/_images/protected-planet.jpg
