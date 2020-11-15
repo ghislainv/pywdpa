@@ -1,19 +1,16 @@
-pywdpa package
-==============
+References
+**********
 
-Submodules
-----------
-
-pywdpa.get\_token module
-------------------------
+``.get_token`` function
+=======================
 
 .. automodule:: pywdpa.get_token
    :members:
    :undoc-members:
    :show-inheritance:
 
-pywdpa.get\_wdpa module
------------------------
+``.get_wdpa`` function
+======================
 
 .. automodule:: pywdpa.get_wdpa
    :members:
