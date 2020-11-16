@@ -1,14 +1,14 @@
 Changelog
 =========
 
-pywdpa 0.1.2 to 0.1.2-1
+pywdpa 0.1.2 to 0.1.3
 -----------------------
 
 * Minor changes.
 * New logo.
 * New website using Sphinx.
 * At: `<https://ecology.ghislainv.fr/pywdpa>`_.
-* Use of rst in Python docstring.
+* Use of rst in Python docstrings.
 
 pywdpa 0.1.1
 ------------

@@ -27,8 +27,6 @@ with open("README.rst", "rb") as f:
 # Project URLs
 project_urls = {
     'Documentation': 'https://ecology.ghislainv.fr/pywdpa',
-    'Funding': 'https://donate.pypi.org',
-    'Say Thanks!': 'https://saythanks.io/to/ghislain.vieilledent@cirad.fr',
     'Source': 'https://github.com/ghislainv/pywdpa/',
     'Traker': 'https://github.com/ghislainv/pywdpa/issues',
 }
