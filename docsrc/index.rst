@@ -6,7 +6,7 @@ Content
 .. toctree::
    :maxdepth: 1
 
-   references
+   reference
    changelog
 
 Indices and tables
