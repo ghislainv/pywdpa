@@ -1,6 +1,6 @@
-.. image:: _static/logo-pywdpa.svg
+.. image:: _images/logo-pywdpa.svg
    :align: right
-   :target: _static/logo-pywdpa.svg
+   :target: _images/logo-pywdpa.svg
    :alt: Logo pywdpa
    :width: 140px
 	   
