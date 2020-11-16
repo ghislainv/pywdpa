@@ -1,3 +1,12 @@
+.. image:: https://ecology.ghislainv.fr/pywdpa/_static/logo-pywdpa.svg
+   :align: right
+   :target: https://ecology.ghislainv.fr/pywdpa/_static/logo-pywdpa.svg
+   :alt: Logo pywdpa
+   :width: 140px
+	   
+``pywdpa`` Python package
+=========================
+ 
 .. image:: https://badge.fury.io/py/pywdpa.svg
    :target: http://badge.fury.io/py/pywdpa
    :alt: PyPI version
@@ -13,21 +22,7 @@
 .. image:: https://img.shields.io/badge/licence-GPLv3-8f10cb.svg
    :target: https://www.gnu.org/licenses/gpl-3.0.html
    :alt: License GPLv3
-
-.. image:: https://ecology.ghislainv.fr/pywdpa/_static/logo-pywdpa.svg
-   :align: right
-   :target: https://ecology.ghislainv.fr/pywdpa/_static/logo-pywdpa.svg
-   :alt: Logo pywdpa
-   :width: 120px
 	 
-``pywdpa`` Python package
-=========================
-
-.. image:: https://ecology.ghislainv.fr/pywdpa/_images/protected-planet.jpg
-   :align: center
-   :target: https://ecology.ghislainv.fr/pywdpa/_images/protected-planet.jpg
-   :alt: Protected Planet map
-
 Overview
 --------
 
@@ -39,6 +34,11 @@ countries with an iso3 code using the Protected Planet API at
 `<https://api.protectedplanet.net>`_. The ``pywdpa`` package
 translates some functions of the R package ``worldpa``
 (`<https://github.com/FRBCesab/worldpa>`_) in the Python language.
+
+.. image:: _images/protected-planet.jpg
+   :align: center
+   :target: _images/protected-planet.jpg
+   :alt: protected-planet
 
 Terms and conditions
 --------------------
@@ -94,4 +94,5 @@ but you can also install ``pywdpa`` executing the ``setup.py`` file:
    $ git clone https://github.com/ghislainv/pywdpa
    $ cd pywdpa
    $ python setup.py install
-	     
+
+   
