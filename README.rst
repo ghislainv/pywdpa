@@ -30,7 +30,11 @@
 .. image:: https://img.shields.io/badge/licence-GPLv3-8f10cb.svg
    :target: https://www.gnu.org/licenses/gpl-3.0.html
    :alt: License GPLv3
-	 
+
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4275513.svg
+   :target: https://doi.org/10.5281/zenodo.4275513
+   :alt: Zenodo
+      
 Overview
 --------
 
