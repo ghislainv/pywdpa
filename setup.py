@@ -24,12 +24,22 @@ version = re.search(
 with open("README.rst", "rb") as f:
     long_description = f.read().decode("utf-8")
 
+# Project URLs
+project_urls = {
+    'Documentation': 'https://ecology.ghislainv.fr/pywdpa',
+    'Funding': 'https://donate.pypi.org',
+    'Say Thanks!': 'https://saythanks.io/to/ghislain.vieilledent@cirad.fr',
+    'Source': 'https://github.com/ghislainv/pywdpa/',
+    'Traker': 'https://github.com/ghislainv/pywdpa/issues',
+}
+
 # Setup
 setup(name="pywdpa",
       version=version,
       author="Ghislain Vieilledent",
       author_email="ghislain.vieilledent@cirad.fr",
-      url="https://github.com/ghislainv/pywdpa",
+      url="https://ecology.ghislainv.fr/pywdpa",
+      project_urls=project_urls,
       license="GPLv3",
       description="This is the Python 'pywdpa' package",
       long_description=long_description,
@@ -40,7 +50,7 @@ setup(name="pywdpa",
                    "Programming Language :: Python :: 3",
                    "Operating System :: OS Independent",
                    "Topic :: Scientific/Engineering :: Bio-Informatics"],
-      keywords="protected areas wdpa world database on protected areas",
+      keywords="protected areas wdpa world database protected areas",
       python_requires=">=2.7",
       packages=["pywdpa"],
       package_dir={"pywdpa": "pywdpa"},

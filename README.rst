@@ -8,7 +8,7 @@
 
 .. image:: https://ecology.ghislainv.fr/pywdpa/_images/logo-pywdpa.svg
    :align: right
-   :target: https://ecology.ghislainv.fr/pywdpa/_images/logo-pywdpa.svg
+   :target: https://ecology.ghislainv.fr/pywdpa
    :alt: Logo pywdpa
    :width: 140px
 	   
