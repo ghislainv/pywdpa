@@ -44,17 +44,19 @@
 <dd><p>Check Protected Planet API token.</p>
 <p>This function checks if the user has stored a valid Protected
 Planet API token as an environment variable file under the
-key “WDPA_KEY”.</p>
+key <code class="docutils literal notranslate"><span class="pre">&quot;WDPA_KEY&quot;</span></code>.</p>
 <p>Before using this package for the first time, the user must follow
 these steps:</p>
-<p>#. Fill in the form available at <a class="reference external" href="https://api.protectedplanet.net/request">https://api.protectedplanet.net/request</a>
-to obtain a personal API token.
-#. Store the token as an environment variable under the key “WDPA_KEY”.
-You can use the command os.environ[“WDPA_KEY”]=”your_token” or
-python-dotenv: <a class="reference external" href="https://github.com/theskumar/python-dotenv">https://github.com/theskumar/python-dotenv</a>.</p>
+<ol class="arabic simple">
+<li><p>Fill in the form available at <a class="reference external" href="https://api.protectedplanet.net/request">https://api.protectedplanet.net/request</a>
+to obtain a personal API token.</p></li>
+<li><p>Store the token as an environment variable under the key “WDPA_KEY”.
+You can use the command <code class="docutils literal notranslate"><span class="pre">os.environ[&quot;WDPA_KEY&quot;]=&quot;your_token&quot;</span></code> or
+python-dotenv: <a class="reference external" href="https://github.com/theskumar/python-dotenv">https://github.com/theskumar/python-dotenv</a>.</p></li>
+</ol>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>key</strong> – Environment variable name (recommended name: “WDPA_KEY”).</p>
+<dd class="field-odd"><p><strong>key</strong> – Environment variable name (recommended name: <code class="docutils literal notranslate"><span class="pre">&quot;WDPA_KEY&quot;</span></code>).</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A vector of length one with the value of the API token.</p>

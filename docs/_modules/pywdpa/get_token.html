@@ -53,22 +53,22 @@
 <span class="c1"># get_token()</span>
 <div class="viewcode-block" id="get_token"><a class="viewcode-back" href="../../references.html#pywdpa.get_token.get_token">[docs]</a><span class="k">def</span> <span class="nf">get_token</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s2">&quot;WDPA_KEY&quot;</span><span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;Check Protected Planet API token.</span>
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Check Protected Planet API token.</span>
 
 <span class="sd">    This function checks if the user has stored a valid Protected</span>
 <span class="sd">    Planet API token as an environment variable file under the</span>
-<span class="sd">    key &quot;WDPA_KEY&quot;.</span>
+<span class="sd">    key ``&quot;WDPA_KEY&quot;``\ .</span>
 
 <span class="sd">    Before using this package for the first time, the user must follow</span>
 <span class="sd">    these steps:</span>
 
-<span class="sd">    #. Fill in the form available at https://api.protectedplanet.net/request</span>
-<span class="sd">    to obtain a personal API token.</span>
+<span class="sd">    #. Fill in the form available at `&lt;https://api.protectedplanet.net/request&gt;`_</span>
+<span class="sd">       to obtain a personal API token.</span>
 <span class="sd">    #. Store the token as an environment variable under the key &quot;WDPA_KEY&quot;.</span>
-<span class="sd">    You can use the command os.environ[&quot;WDPA_KEY&quot;]=&quot;your_token&quot; or</span>
-<span class="sd">    python-dotenv: https://github.com/theskumar/python-dotenv.</span>
+<span class="sd">       You can use the command ``os.environ[&quot;WDPA_KEY&quot;]=&quot;your_token&quot;`` or</span>
+<span class="sd">       python-dotenv: `&lt;https://github.com/theskumar/python-dotenv&gt;`_.</span>
 
-<span class="sd">    :param key: Environment variable name (recommended name: &quot;WDPA_KEY&quot;).</span>
+<span class="sd">    :param key: Environment variable name (recommended name: ``&quot;WDPA_KEY&quot;``\ ).</span>
 
 <span class="sd">    :return: A vector of length one with the value of the API token.</span>
 
