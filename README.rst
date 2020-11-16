@@ -1,7 +1,6 @@
-
-.. image:: _images/logo-pywdpa.svg
+.. image:: https://ecology.ghislainv.fr/pywdpa/_images/logo-pywdpa.svg
    :align: right
-   :target: _images/logo-pywdpa.svg
+   :target: https://ecology.ghislainv.fr/pywdpa/_images/logo-pywdpa.svg
    :alt: Logo pywdpa
    :width: 140px
 	   
@@ -36,9 +35,9 @@ countries with an iso3 code using the Protected Planet API at
 translates some functions of the R package ``worldpa``
 (`<https://github.com/FRBCesab/worldpa>`_) in the Python language.
 
-.. image:: _images/protected-planet.jpg
+.. image:: https://ecology.ghislainv.fr/pywdpa/_images/protected-planet.jpg
    :align: center
-   :target: _images/protected-planet.jpg
+   :target: https://ecology.ghislainv.fr/pywdpa/_images/protected-planet.jpg
    :alt: protected-planet
 
 Terms and conditions
