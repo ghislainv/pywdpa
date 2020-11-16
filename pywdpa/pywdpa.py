@@ -13,10 +13,11 @@
 pywdpa.pywdpa: provides entry point main().
 """
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 import sys
 from .get_wdpa import get_wdpa
+
 
 def main():
     print("Executing pywdpa version %s." % __version__)
