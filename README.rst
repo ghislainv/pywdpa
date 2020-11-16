@@ -1,3 +1,11 @@
+..
+   # ==============================================================================
+   # author          :Ghislain Vieilledent
+   # email           :ghislain.vieilledent@cirad.fr, ghislainv@gmail.com
+   # web             :https://ecology.ghislainv.fr
+   # license         :GPLv3
+   # ==============================================================================
+
 .. image:: https://ecology.ghislainv.fr/pywdpa/_images/logo-pywdpa.svg
    :align: right
    :target: https://ecology.ghislainv.fr/pywdpa/_images/logo-pywdpa.svg
