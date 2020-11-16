@@ -1,6 +1,6 @@
-.. image:: https://ecology.ghislainv.fr/pywdpa/_static/logo-pywdpa.svg
+.. image:: _static/logo-pywdpa.svg
    :align: right
-   :target: https://ecology.ghislainv.fr/pywdpa/_static/logo-pywdpa.svg
+   :target: _static/logo-pywdpa.svg
    :alt: Logo pywdpa
    :width: 140px
 	   
