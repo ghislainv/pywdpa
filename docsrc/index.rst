@@ -4,8 +4,9 @@ Content
 -------
 	     
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
+   notebooks/get_started
    reference
    changelog
 
