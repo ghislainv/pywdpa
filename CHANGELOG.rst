@@ -1,14 +1,19 @@
 Changelog
 =========
 
+pywdpa dev version (GitHub)
+---------------------------
+
+* Get started notebook
+
 pywdpa 0.1.2 to 0.1.3
------------------------
+---------------------
 
 * Minor changes.
 * New logo.
 * New website using Sphinx.
 * At: `<https://ecology.ghislainv.fr/pywdpa>`_.
-* Use of rst in Python docstrings.
+* Use of reST markup language in Python docstrings.
 
 pywdpa 0.1.1
 ------------
