@@ -10,7 +10,7 @@
 # ==============================================================================
 
 # Import
-import re # Regular expression
+import re  # Regular expression
 from setuptools import setup
 
 # Version
@@ -39,7 +39,7 @@ setup(name="pywdpa",
       url="https://ecology.ghislainv.fr/pywdpa",
       project_urls=project_urls,
       license="GPLv3",
-      description="This is the Python 'pywdpa' package",
+      description="Easy access to world's protected areas",
       long_description=long_description,
       long_description_content_type="text/x-rst",
       classifiers=["Development Status :: 4 - Beta",
@@ -52,8 +52,11 @@ setup(name="pywdpa",
       python_requires=">=2.7",
       packages=["pywdpa"],
       package_dir={"pywdpa": "pywdpa"},
-      entry_points = {"console_scripts": ["pywdpa = pywdpa.pywdpa:main"]},
+      entry_points={"console_scripts": ["pywdpa = pywdpa.pywdpa:main"]},
       install_requires=["numpy", "gdal", "requests"],
+      extras_require={
+          "interactive": ["jupyter", "python-dotenv", "geopandas",
+                          "descartes", "folium"]},
       zip_safe=False)
 
 # End
