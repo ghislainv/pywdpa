@@ -43,7 +43,7 @@ def get_wdpa(iso3, output_dir="."):
     if response.status_code == 404:
         return "Invalid ISO-3 code"
 
-    response = json.loads(response.text) # Equivalent to response.json()
+    response = json.loads(response.text)  # Equivalent to response.json()
 
     pas_count = response["country"]["pas_count"]
     pages = list(range(np.int(np.ceil(pas_count / 50.0))))

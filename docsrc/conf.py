@@ -12,7 +12,7 @@
 #
 import os
 import sys
-import re # Regular expression
+import re  # Regular expression
 sys.path.insert(0, os.path.abspath('..'))
 
 
@@ -56,7 +56,7 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster' # 'sphinx_rtd_theme'
+html_theme = 'alabaster'  # 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -64,7 +64,8 @@ html_theme = 'alabaster' # 'sphinx_rtd_theme'
 #
 html_theme_options = {
     'description': "A simple access to world's protected areas",
-    'code_font_family': "'Roboto Mono', 'Consolas', 'Menlo', 'Deja Vu Sans Mono', "
+    'code_font_family': "'Roboto Mono', 'Consolas', 'Menlo', "
+                        "'Deja Vu Sans Mono', "
                         "'Bitstream Vera Sans Mono', monospace",
     'font_family': "'Lato', Arial, sans-serif",
     'head_font_family': "'Lato', Arial, sans-serif",
@@ -85,7 +86,7 @@ html_favicon = '_static/favicon.ico'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster' 
+html_theme = 'alabaster'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

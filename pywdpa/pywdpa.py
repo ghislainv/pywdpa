@@ -9,20 +9,21 @@
 # license         :GPLv3
 # ==============================================================================
 
-"""
-pywdpa.pywdpa: provides entry point main().
-"""
+import sys
+
+from .get_wdpa import get_wdpa
 
 __version__ = "0.1.3"
 
-import sys
-from .get_wdpa import get_wdpa
-
 
 def main():
-    print("Executing pywdpa version %s." % __version__)
-    print("For country with isocode: %s" % sys.argv[1])
-    get_wdpa(sys.argv[1])
+    """
+    pywdpa.pywdpa: provides entry point main().
+    """
+    isocode = sys.argv[1]
+    print("Executing pywdpa version {}.".format(__version__))
+    print("For country with isocode: {}.".format(isocode))
+    get_wdpa(isocode)
     return None
 
 # End

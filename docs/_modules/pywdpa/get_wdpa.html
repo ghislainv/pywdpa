@@ -79,7 +79,7 @@
     <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">404</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">&quot;Invalid ISO-3 code&quot;</span>
 
-    <span class="n">response</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span> <span class="c1"># Equivalent to response.json()</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>  <span class="c1"># Equivalent to response.json()</span>
 
     <span class="n">pas_count</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;country&quot;</span><span class="p">][</span><span class="s2">&quot;pas_count&quot;</span><span class="p">]</span>
     <span class="n">pages</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">pas_count</span> <span class="o">/</span> <span class="mf">50.0</span><span class="p">))))</span>
