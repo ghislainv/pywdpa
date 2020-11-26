@@ -82,7 +82,7 @@ html_theme_options = {
     'logo': 'logo-pywdpa.svg'
 }
 html_favicon = '_static/favicon.png'
-html_title = "pywdpa — Easy access to world's protected areas"
+html_title = "pywdpa — Simple access to world's protected areas"
 html_short_title = 'pywdpa'
 html_base_url = 'https://ecology.ghislainv.fr/pywdpa/'
 
