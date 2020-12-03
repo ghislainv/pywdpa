@@ -59,12 +59,11 @@ You must ensure that the following citation is always clearly
 reproduced in any publication or analysis involving the Protected
 Planet Materials in any derived form or format:
 
-..
-
-   UNEP-WCMC and IUCN (\ ``YEAR``\ ) Protected Planet: The World
-   Database on Protected Areas (WDPA). Cambridge, UK: UNEP-WCMC and
-   IUCN. Available at: www.protectedplanet.net (dataset downloaded the
-   ``YEAR/MONTH``\ ).
+::
+    UNEP-WCMC and IUCN (\ ``YEAR``\ ) Protected Planet: The World
+    Database on Protected Areas (WDPA). Cambridge, UK: UNEP-WCMC and
+    IUCN. Available at: www.protectedplanet.net (dataset downloaded the
+    ``YEAR/MONTH``\ ).
 
 
 For further details on terms and conditions of the WDPA usage, please
