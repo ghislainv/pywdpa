@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reference &#8212; pywdpa — Simple access to world&#39;s protected areas</title>
+    <title>Reference &#8212; pywdpa — A simple access to world&#39;s protected areas</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -14,7 +14,7 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Changelog" href="changelog.html" />
@@ -26,78 +26,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head><body>
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          
-
-          <div class="body" role="main">
-            
-  <div class="section" id="reference">
-<h1>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="module-pywdpa.get_token">
-<span id="get-token"></span><h2><code class="docutils literal notranslate"><span class="pre">.get_token</span></code><a class="headerlink" href="#module-pywdpa.get_token" title="Permalink to this headline">¶</a></h2>
-<dl class="py function">
-<dt id="pywdpa.get_token.get_token">
-<code class="sig-name descname">get_token</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">'WDPA_KEY'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pywdpa/get_token.html#get_token"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pywdpa.get_token.get_token" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check Protected Planet API token.</p>
-<p>This function checks if the user has stored a valid Protected
-Planet API token as an environment variable file under the
-key <code class="docutils literal notranslate"><span class="pre">&quot;WDPA_KEY&quot;</span></code>.</p>
-<p>Before using this package for the first time, the user must follow
-these steps:</p>
-<ol class="arabic simple">
-<li><p>Fill in the form available at <a class="reference external" href="https://api.protectedplanet.net/request">https://api.protectedplanet.net/request</a>
-to obtain a personal API token.</p></li>
-<li><p>Store the token as an environment variable under the key “WDPA_KEY”.
-You can use the command <code class="docutils literal notranslate"><span class="pre">os.environ[&quot;WDPA_KEY&quot;]=&quot;your_token&quot;</span></code> or
-python-dotenv: <a class="reference external" href="https://github.com/theskumar/python-dotenv">https://github.com/theskumar/python-dotenv</a>.</p></li>
-</ol>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>key</strong> – Environment variable name (recommended name: <code class="docutils literal notranslate"><span class="pre">&quot;WDPA_KEY&quot;</span></code>).</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A vector of length one with the value of the API token.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="section" id="module-pywdpa.get_wdpa">
-<span id="get-wdpa"></span><h2><code class="docutils literal notranslate"><span class="pre">.get_wdpa</span></code><a class="headerlink" href="#module-pywdpa.get_wdpa" title="Permalink to this headline">¶</a></h2>
-<dl class="py function">
-<dt id="pywdpa.get_wdpa.get_wdpa">
-<code class="sig-name descname">get_wdpa</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">iso3</span></em>, <em class="sig-param"><span class="n">output_dir</span><span class="o">=</span><span class="default_value">'.'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pywdpa/get_wdpa.html#get_wdpa"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pywdpa.get_wdpa.get_wdpa" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function downloads protected areas for one country using the
-WDPA API. Protected areas defined by a point are not
-considered. The shapefile is written on the hard drive (in the
-current directory).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>iso3</strong> – The ISO-3 code of the country.</p></li>
-<li><p><strong>output_dir</strong> – Directory used for download.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
-</div>
-
-
-          </div>
-          
-        </div>
-      </div>
+  <div class="document">
+    
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
 <p class="logo">
   <a href="index.html">
     <img class="logo" src="_static/logo-pywdpa.svg" alt="Logo"/>
+    
+    <h1 class="logo logo-name">pywdpa</h1>
     
   </a>
 </p>
@@ -122,8 +59,8 @@ current directory).</p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="notebooks/get_started.html">Get started</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-pywdpa.get_token"><code class="docutils literal notranslate"><span class="pre">.get_token</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-pywdpa.get_wdpa"><code class="docutils literal notranslate"><span class="pre">.get_wdpa</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pywdpa.get_token">get_token</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pywdpa.get_wdpa">get_wdpa</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
@@ -158,8 +95,72 @@ current directory).</p>
 
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="reference">
+<h1>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-pywdpa.get_token">
+<span id="get-token"></span><h2>get_token<a class="headerlink" href="#module-pywdpa.get_token" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="pywdpa.get_token.get_token">
+<code class="sig-name descname">get_token</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span><span class="o">=</span><span class="default_value">'WDPA_KEY'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pywdpa/get_token.html#get_token"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pywdpa.get_token.get_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check Protected Planet API token.</p>
+<p>This function checks if the user has stored a valid Protected
+Planet API token as an environment variable file under the
+key <code class="docutils literal notranslate"><span class="pre">&quot;WDPA_KEY&quot;</span></code>.</p>
+<p>Before using this package for the first time, the user must follow
+these steps:</p>
+<ol class="arabic simple">
+<li><p>Fill in the form available at <a class="reference external" href="https://api.protectedplanet.net/request">https://api.protectedplanet.net/request</a>
+to obtain a personal API token.</p></li>
+<li><p>Store the token as an environment variable under the key “WDPA_KEY”.
+You can use the command <code class="docutils literal notranslate"><span class="pre">os.environ[&quot;WDPA_KEY&quot;]=&quot;your_token&quot;</span></code> or
+python-dotenv: <a class="reference external" href="https://github.com/theskumar/python-dotenv">https://github.com/theskumar/python-dotenv</a>.</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> – Environment variable name (recommended name: <code class="docutils literal notranslate"><span class="pre">&quot;WDPA_KEY&quot;</span></code>).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A vector of length one with the value of the API token.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pywdpa.get_wdpa">
+<span id="get-wdpa"></span><h2>get_wdpa<a class="headerlink" href="#module-pywdpa.get_wdpa" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="pywdpa.get_wdpa.get_wdpa">
+<code class="sig-name descname">get_wdpa</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">iso3</span></em>, <em class="sig-param"><span class="n">output_dir</span><span class="o">=</span><span class="default_value">'.'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pywdpa/get_wdpa.html#get_wdpa"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pywdpa.get_wdpa.get_wdpa" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function downloads protected areas for one country using the
+WDPA API. Protected areas defined by a point are not
+considered. The shapefile is written on the hard drive (in the
+current directory).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iso3</strong> – The ISO-3 code of the country.</p></li>
+<li><p><strong>output_dir</strong> – Directory used for download.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
     <div class="footer">
       &copy;2020, Ghislain Vieilledent.
       

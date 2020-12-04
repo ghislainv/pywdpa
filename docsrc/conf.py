@@ -86,8 +86,8 @@ html_theme_options = {
     'fixed_sidebar': 'true'
 }
 
-html_favicon = '_static/favicon.png'
-html_title = "pywdpa — Simple access to world's protected areas"
+html_favicon = '_static/favicon.ico'
+html_title = "pywdpa — A simple access to world's protected areas"
 html_short_title = 'pywdpa'
 html_base_url = 'https://ecology.ghislainv.fr/pywdpa/'
 
