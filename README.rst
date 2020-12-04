@@ -22,11 +22,11 @@
 .. image:: https://img.shields.io/pypi/pyversions/pywdpa.svg
    :target: https://pypi.org/project/pywdpa
    :alt: Python version
-	 
-.. image:: https://api.travis-ci.org/ghislainv/pywdpa.svg?branch=master
-   :target: https://travis-ci.org/ghislainv/pywdpa
-   :alt: Travis CI
 
+.. image:: https://github.com/ghislainv/pywdpa/workflows/PyPkg/badge.svg
+   :target: https://github.com/ghislainv/pywdpa/actions
+   :alt: GitHub Actions
+	 
 .. image:: https://img.shields.io/badge/licence-GPLv3-8f10cb.svg
    :target: https://www.gnu.org/licenses/gpl-3.0.html
    :alt: License GPLv3
