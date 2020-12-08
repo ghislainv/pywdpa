@@ -6,37 +6,21 @@
    # license         :GPLv3
    # ==============================================================================
 
-.. image:: https://ecology.ghislainv.fr/pywdpa/_images/logo-pywdpa.svg
+.. image:: https://ecology.ghislainv.fr/pywdpa/_static/logo-pywdpa.svg
    :align: right
    :target: https://ecology.ghislainv.fr/pywdpa
    :alt: Logo pywdpa
    :width: 140px
 	   
 ``pywdpa`` Python package
-=========================
- 
-.. image:: https://badge.fury.io/py/pywdpa.svg
-   :target: http://badge.fury.io/py/pywdpa
-   :alt: PyPI version
-	 
-.. image:: https://img.shields.io/pypi/pyversions/pywdpa.svg
-   :target: https://pypi.org/project/pywdpa
-   :alt: Python version
+*************************
 
-.. image:: https://github.com/ghislainv/pywdpa/workflows/PyPkg/badge.svg
-   :target: https://github.com/ghislainv/pywdpa/actions
-   :alt: GitHub Actions
-	 
-.. image:: https://img.shields.io/badge/licence-GPLv3-8f10cb.svg
-   :target: https://www.gnu.org/licenses/gpl-3.0.html
-   :alt: License GPLv3
 
-.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4275513.svg
-   :target: https://doi.org/10.5281/zenodo.4275513
-   :alt: Zenodo
-      
+|Python version| |PyPI version| |GitHub Actions| |License| |Zenodo|
+
+
 Overview
---------
+========
 
 The ``pywdpa`` Python package is an interface to the World Database on
 Protected Areas (WDPA) hosted on the Protected Planet website at
@@ -47,13 +31,13 @@ countries with an iso3 code using the Protected Planet API at
 translates some functions of the R package ``worldpa``
 (`<https://github.com/FRBCesab/worldpa>`_) in the Python language.
 
-.. image:: https://ecology.ghislainv.fr/pywdpa/_images/protected-planet.jpg
+.. image:: https://ecology.ghislainv.fr/pywdpa/_static/protected-planet.jpg
    :align: center
-   :target: https://ecology.ghislainv.fr/pywdpa/_images/protected-planet.jpg
+   :target: https://ecology.ghislainv.fr/pywdpa
    :alt: protected-planet
 
 Terms and conditions
---------------------
+====================
 
 You must ensure that the following citation is always clearly
 reproduced in any publication or analysis involving the Protected
@@ -72,7 +56,7 @@ visit the page:
 `<https://www.protectedplanet.net/c/terms-and-conditions>`_.
 
 Prerequisites
--------------
+=============
 
 This package uses the Protected Planet API to access data on world
 protected areas. You must first have obtained a Personal API Token by
@@ -83,7 +67,7 @@ using either the command ``os.environ["WDPA_KEY"]="your_token"`` or
 `python-dotenv <https://github.com/theskumar/python-dotenv>`_.
 
 Installation
-------------
+============
 
 The easiest way to install the ``pywdpa`` Python package is via `pip <https://pip.pypa.io/en/stable/>`_:
 
@@ -108,3 +92,23 @@ but you can also install ``pywdpa`` executing the ``setup.py`` file:
    $ python setup.py install
 
    
+.. |Python version| image:: https://img.shields.io/pypi/pyversions/pywdpa?logo=python&logoColor=ffd43b&color=306998
+   :target: https://pypi.org/project/pywdpa
+   :alt: Python version
+
+.. |PyPI version| image:: https://img.shields.io/pypi/v/pywdpa
+   :target: https://pypi.org/project/pywdpa
+   :alt: PyPI version
+
+.. |GitHub Actions| image:: https://github.com/ghislainv/pywdpa/workflows/PyPkg/badge.svg
+   :target: https://github.com/ghislainv/pywdpa/actions
+   :alt: GitHub Actions
+	 
+.. |License| image:: https://img.shields.io/badge/licence-GPLv3-8f10cb.svg
+   :target: https://www.gnu.org/licenses/gpl-3.0.html
+   :alt: License GPLv3
+
+.. |Zenodo| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.4275513.svg
+   :target: https://doi.org/10.5281/zenodo.4275513
+   :alt: Zenodo
+
