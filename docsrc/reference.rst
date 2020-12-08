@@ -1,5 +1,5 @@
-Reference
-*********
+Python API
+**********
 
 get_token
 =========
