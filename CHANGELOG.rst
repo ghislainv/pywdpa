@@ -1,13 +1,14 @@
 Changelog
-=========
+*********
 
-pywdpa dev version (GitHub)
----------------------------
+pywdpa 0.1.4
+============
 
 * Get started notebook
+* Web-site update
 
 pywdpa 0.1.2 to 0.1.3
----------------------
+=====================
 
 * Minor changes.
 * New logo.
@@ -16,7 +17,7 @@ pywdpa 0.1.2 to 0.1.3
 * Use of reST markup language in Python docstrings.
 
 pywdpa 0.1.1
-------------
+============
 
 * Dependence to ``python-dotenv`` has been removed.
 * The ``.env`` file have to be created if using ``python-dotenv``\ .
@@ -25,7 +26,7 @@ pywdpa 0.1.1
 
 
 pywdpa 0.1
-----------
+==========
 
 * First release of the package.
 * Two functions ``.get_token()`` and ``.get_wdpa()``\ .
