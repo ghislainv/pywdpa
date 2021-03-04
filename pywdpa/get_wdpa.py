@@ -12,12 +12,13 @@
 # Import
 from __future__ import division, print_function  # Python 3 compatibility
 import os
+
+import json
+import numpy as np
 from osgeo import ogr
 import requests
-import json
-from .get_token import get_token
-import numpy as np
 
+from .get_token import get_token
 
 # get_wdpa()
 def get_wdpa(iso3, output_dir="."):
@@ -102,7 +103,7 @@ def get_wdpa(iso3, output_dir="."):
                 #     g = g.Buffer(buffer_size)
 
                 # If polygon, add feature
-                if g.GetGeometryName() == "POLYGON":
+                if g.GetGeometryName() in ["POLYGON", "MULTIPOLYGON"]:
                     # Create feature with geometry and attributes
                     featureDefn = layer.GetLayerDefn()
                     feature = ogr.Feature(featureDefn)

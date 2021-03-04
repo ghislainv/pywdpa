@@ -4,6 +4,7 @@ Changelog
 pywdpa 0.1.4
 ============
 
+* Correcting a bug to include multipolygons
 * Get started notebook
 * Web-site update
 
@@ -20,7 +21,7 @@ pywdpa 0.1.1
 ============
 
 * Dependence to ``python-dotenv`` has been removed.
-* The ``.env`` file have to be created if using ``python-dotenv``\ .
+* The ``.env`` file has to be created if using ``python-dotenv``\ .
 * See `<https://pypi.org/project/python-dotenv/>`_.
 * Tests have been added for functions.
 
