@@ -113,12 +113,13 @@
 <span class="c1"># Import</span>
 <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span>  <span class="c1"># Python 3 compatibility</span>
 <span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">osgeo</span> <span class="kn">import</span> <span class="n">ogr</span>
 <span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">from</span> <span class="nn">.get_token</span> <span class="kn">import</span> <span class="n">get_token</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
+<span class="kn">from</span> <span class="nn">.get_token</span> <span class="kn">import</span> <span class="n">get_token</span>
 
 <span class="c1"># get_wdpa()</span>
 <div class="viewcode-block" id="get_wdpa"><a class="viewcode-back" href="../../reference.html#pywdpa.get_wdpa.get_wdpa">[docs]</a><span class="k">def</span> <span class="nf">get_wdpa</span><span class="p">(</span><span class="n">iso3</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">):</span>
@@ -203,7 +204,7 @@
                 <span class="c1">#     g = g.Buffer(buffer_size)</span>
 
                 <span class="c1"># If polygon, add feature</span>
-                <span class="k">if</span> <span class="n">g</span><span class="o">.</span><span class="n">GetGeometryName</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;POLYGON&quot;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">g</span><span class="o">.</span><span class="n">GetGeometryName</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;POLYGON&quot;</span><span class="p">,</span> <span class="s2">&quot;MULTIPOLYGON&quot;</span><span class="p">]:</span>
                     <span class="c1"># Create feature with geometry and attributes</span>
                     <span class="n">featureDefn</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetLayerDefn</span><span class="p">()</span>
                     <span class="n">feature</span> <span class="o">=</span> <span class="n">ogr</span><span class="o">.</span><span class="n">Feature</span><span class="p">(</span><span class="n">featureDefn</span><span class="p">)</span>
