@@ -1,7 +1,7 @@
 Community guidelines
 ====================
 
-The ``forestatrisk`` Python package is Open Source and released under
+The ``pywdpa`` Python package is Open Source and released under
 the `GNU GPL version 3 license <license.html>`__. Anybody who is
 interested can contribute to the package development. There are many
 ways to contribute, such as writing tutorials, examples or tests,
@@ -15,7 +15,7 @@ Report an issue
 
 If you want to report a bug, request a feature, or discuss an issue,
 please open an `issue
-<https://github.com/ghislainv/forestatrisk/issues>`__ on the GitHub
+<https://github.com/ghislainv/pywdpa/issues>`__ on the GitHub
 project page.
 
 Contribute to code
@@ -34,9 +34,9 @@ Contribute to Open Source
 
 The important steps to follow are:
 
-1. Start by creating a fork of the ``forestatrisk`` repository
+1. Start by creating a fork of the ``pywdpa`` repository
 2. Make changes to the source code on a development branch, not the default *master* branch
-3. Keep your fork's master and development branches up to date with changes in the ``forestatrisk`` repository
+3. Keep your fork's master and development branches up to date with changes in the ``pywdpa`` repository
 4. Commit the changes you made. Chris Beams has written a `guide <https://chris.beams.io/posts/git-commit/>`__
    on how to write good commit messages.
 5. Push to your fork and submit a pull request.
