@@ -73,7 +73,6 @@ def get_wdpa(iso3, output_dir="."):
         layer.CreateField(ogr.FieldDefn("iucn_cat", ogr.OFTString))
         layer.CreateField(ogr.FieldDefn("status", ogr.OFTString))
         layer.CreateField(ogr.FieldDefn("date", ogr.OFTString))
-        layer.CreateField(ogr.FieldDefn("year", ogr.OFTString))
 
         # API
         category = "v3/protected_areas/search/"
@@ -126,8 +125,6 @@ def get_wdpa(iso3, output_dir="."):
                     feature.SetField("iucn_cat", pa["iucn_category"]["name"])
                     feature.SetField("status", pa["legal_status"]["name"])
                     feature.SetField("date", pa["legal_status_updated_at"])
-                    feature.SetField(
-                        "year", pa["legal_status_updated_at"][-4:])
                     # Add feature to layer
                     layer.CreateFeature(feature)
                     # Dereference the feature
