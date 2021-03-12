@@ -21,8 +21,9 @@ import requests
 from .get_token import get_token
 
 # get_wdpa()
-def get_wdpa(iso3, output_dir="."):
 
+
+def get_wdpa(iso3, output_dir="."):
     """This function downloads protected areas for one country using the
     WDPA API. Protected areas defined by a point are not
     considered. The shapefile is written on the hard drive (in the
@@ -64,14 +65,15 @@ def get_wdpa(iso3, output_dir="."):
         # Add attributes
         layer.CreateField(ogr.FieldDefn("wdpa_id", ogr.OFTInteger))
         layer.CreateField(ogr.FieldDefn("pa_name", ogr.OFTString))
-        layer.CreateField(ogr.FieldDefn("original_name", ogr.OFTString))
+        layer.CreateField(ogr.FieldDefn("orig_name", ogr.OFTString))
         layer.CreateField(ogr.FieldDefn("ctry_iso3", ogr.OFTString))
         layer.CreateField(ogr.FieldDefn("owner_type", ogr.OFTString))
         layer.CreateField(ogr.FieldDefn("is_marine", ogr.OFTString))
-        layer.CreateField(ogr.FieldDefn("designation", ogr.OFTString))
-        layer.CreateField(ogr.FieldDefn("iucn_category", ogr.OFTString))
-        layer.CreateField(ogr.FieldDefn("legal_status", ogr.OFTString))
-        layer.CreateField(ogr.FieldDefn("legal_status_updated", ogr.OFTString))
+        layer.CreateField(ogr.FieldDefn("type", ogr.OFTString))
+        layer.CreateField(ogr.FieldDefn("iucn_cat", ogr.OFTString))
+        layer.CreateField(ogr.FieldDefn("status", ogr.OFTString))
+        layer.CreateField(ogr.FieldDefn("date", ogr.OFTString))
+        layer.CreateField(ogr.FieldDefn("year", ogr.OFTString))
 
         # API
         category = "v3/protected_areas/search/"
@@ -114,14 +116,18 @@ def get_wdpa(iso3, output_dir="."):
                     feature.SetGeometry(g)
                     feature.SetField("wdpa_id", pa["wdpa_id"])
                     feature.SetField("pa_name", pa["name"])
-                    feature.SetField("original_name", pa["original_name"])
+                    feature.SetField(
+                        "orig_name", pa["original_name"])
                     feature.SetField("ctry_iso3", iso3)
                     feature.SetField("owner_type", pa["owner_type"])
                     feature.SetField("is_marine", str(pa["marine"]))
-                    feature.SetField("designation", pa["designation"]["name"])
-                    feature.SetField("iucn_category", pa["iucn_category"]["name"])
-                    feature.SetField("legal_status", pa["legal_status"]["name"])
-                    feature.SetField("legal_status_updated", pa["legal_status_updated_at"])
+                    feature.SetField(
+                        "type", pa["designation"]["name"])
+                    feature.SetField("iucn_cat", pa["iucn_category"]["name"])
+                    feature.SetField("status", pa["legal_status"]["name"])
+                    feature.SetField("date", pa["legal_status_updated_at"])
+                    feature.SetField(
+                        "year", pa["legal_status_updated_at"][-4:])
                     # Add feature to layer
                     layer.CreateFeature(feature)
                     # Dereference the feature

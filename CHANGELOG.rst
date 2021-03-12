@@ -4,7 +4,7 @@ Changelog
 pywdpa 0.1.5
 ============
 
-* Including more attributes (in particular legal_status and legal_status_updated)
+* Including more attributes (in particular status and date).
 
 pywdpa 0.1.4
 ============
