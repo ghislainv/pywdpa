@@ -48,7 +48,7 @@ def get_wdpa(iso3, output_dir="."):
     response = json.loads(response.text)  # Equivalent to response.json()
 
     pas_count = response["country"]["pas_count"]
-    pages = list(range(np.int(np.ceil(pas_count / 50.0))))
+    pages = list(range(int(np.ceil(pas_count / 50.0))))
 
     if pas_count is not None:
 
