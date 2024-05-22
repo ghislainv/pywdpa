@@ -10,7 +10,6 @@
 # ==============================================================================
 
 # Import
-from __future__ import division, print_function  # Python 3 compatibility
 import os
 
 import json
@@ -20,11 +19,11 @@ import requests
 
 from .get_token import get_token
 
-# get_wdpa()
-
 
 def get_wdpa(iso3, output_dir="."):
-    """This function downloads protected areas for one country using the
+    """Get protected areas for a country from WDPA.
+
+    This function downloads protected areas for one country using the
     WDPA API. Protected areas defined by a point are not
     considered. The shapefile is written on the hard drive (in the
     current directory).
@@ -40,7 +39,7 @@ def get_wdpa(iso3, output_dir="."):
     category = "v3/countries/"
     wdpa_token = get_token()
     request = base_url + category + iso3 + "?token=" + wdpa_token
-    response = requests.get(request)
+    response = requests.get(request, timeout=None)
 
     if response.status_code == 404:
         return "Invalid ISO-3 code"
@@ -85,7 +84,7 @@ def get_wdpa(iso3, output_dir="."):
                  iso3, "&per_page=", str(50), "&page=", str(p+1)]
             )
 
-            response = requests.get(request)
+            response = requests.get(request, timeout=None)
             response = response.json()
             response = response["protected_areas"]
 
@@ -110,8 +109,8 @@ def get_wdpa(iso3, output_dir="."):
                 # If polygon, add feature
                 if g.GetGeometryName() in ["POLYGON", "MULTIPOLYGON"]:
                     # Create feature with geometry and attributes
-                    featureDefn = layer.GetLayerDefn()
-                    feature = ogr.Feature(featureDefn)
+                    feature_defn = layer.GetLayerDefn()
+                    feature = ogr.Feature(feature_defn)
                     feature.SetGeometry(g)
                     feature.SetField("wdpa_id", pa["wdpa_id"])
                     feature.SetField("pa_name", pa["name"])

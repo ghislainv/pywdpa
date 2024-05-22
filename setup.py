@@ -1,28 +1,37 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""Installation setup."""
 
-# ==============================================================================
+# ================================================================
 # author          :Ghislain Vieilledent
-# email           :ghislain.vieilledent@cirad.fr, ghislainv@gmail.com
+# email           :ghislain.vieilledent@cirad.fr
 # web             :https://ecology.ghislainv.fr
-# python_version  :>=2.7
+# python_version  :>=3.6
 # license         :GPLv3
-# ==============================================================================
+# ================================================================
 
 # Import
+import io
 import re  # Regular expression
 from setuptools import setup
 
-# Version
-version = re.search(
-    '^__version__\s*=\s*"(.*)"',
-    open('pywdpa/pywdpa.py').read(),
-    re.M
-    ).group(1)
+
+# find_version
+def find_version():
+    """Finding package version."""
+    with open("pywdpa/__init__.py", encoding="utf-8") as init_file:
+        init_text = init_file.read()
+    _version = (re.search('^__version__\\s*=\\s*"(.*)"',
+                          init_text, re.M)
+                .group(1))
+    return _version
+
+
+version = find_version()
 
 # reStructuredText README file
-with open("README.rst", "rb") as f:
-    long_description = f.read().decode("utf-8")
+with io.open("README.rst", encoding="utf-8") as f:
+    long_description = f.read()
 
 # Project URLs
 project_urls = {
@@ -45,12 +54,11 @@ setup(name="pywdpa",
       classifiers=["Development Status :: 4 - Beta",
                    "License :: OSI Approved :: GNU General Public License v3 "
                    "(GPLv3)",
-                   "Programming Language :: Python :: 2",
                    "Programming Language :: Python :: 3",
                    "Operating System :: OS Independent",
                    "Topic :: Scientific/Engineering :: Bio-Informatics"],
       keywords="protected areas wdpa world database protected areas",
-      python_requires=">=2.7",
+      python_requires=">=3.6",
       packages=["pywdpa"],
       package_dir={"pywdpa": "pywdpa"},
       entry_points={"console_scripts": ["pywdpa = pywdpa.pywdpa:main"]},

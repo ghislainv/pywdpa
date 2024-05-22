@@ -1,16 +1,21 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+"""
+pywdpa: Easy access to world's protected areas.
+https://ecology.ghislainv.fr/pywdpa/
+"""
 
-# ==============================================================================
-# author          :Ghislain Vieilledent
-# email           :ghislain.vieilledent@cirad.fr, ghislainv@gmail.com
-# web             :https://ecology.ghislainv.fr
-# python_version  :>=2.7
-# license         :GPLv3
-# ==============================================================================
+# Define double undescore variables
+# https://peps.python.org/pep-0008/#module-level-dunder-names
+__author__ = "Ghislain Vieilledent"
+__email__ = "ghislain.vieilledent@cirad.fr"
+__version__ = "0.1.5"
 
-from __future__ import division, print_function  # Python 3 compatibility
+# GDAL exceptions
+from osgeo import gdal
+
 from .get_token import get_token
 from .get_wdpa import get_wdpa
+
+# GDAL exceptions
+gdal.UseExceptions()
 
 # End

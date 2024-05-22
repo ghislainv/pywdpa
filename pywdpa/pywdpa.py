@@ -11,9 +11,8 @@
 
 import sys
 
+import pywdpa
 from .get_wdpa import get_wdpa
-
-__version__ = "0.1.5"
 
 
 def main():
@@ -21,9 +20,10 @@ def main():
     pywdpa.pywdpa: provides entry point main().
     """
     isocode = sys.argv[1]
-    print("Executing pywdpa version {}.".format(__version__))
-    print("For country with isocode: {}.".format(isocode))
+    print(pywdpa.__doc__)
+    print(f"version {pywdpa.__version__}.")
+    print(f"Country isocode: {isocode}.")
     get_wdpa(isocode)
-    return None
+
 
 # End

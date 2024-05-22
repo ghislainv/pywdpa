@@ -31,7 +31,7 @@ countries with an iso3 code using the Protected Planet API at
 translates some functions of the R package ``worldpa``
 (`<https://github.com/FRBCesab/worldpa>`_) in the Python language.
 
-.. image:: https://ecology.ghislainv.fr/pywdpa/_static/protected-planet.jpg
+.. image:: https://ecology.ghislainv.fr/pywdpa/_static/banner_pywdpa.png
    :align: center
    :target: https://ecology.ghislainv.fr/pywdpa
    :alt: protected-planet

@@ -10,14 +10,12 @@
 # ==============================================================================
 
 # Import
-from __future__ import division, print_function  # Python 3 compatibility
 import os
 import requests
 
 
 # get_token()
 def get_token(key="WDPA_KEY"):
-
     r"""Check Protected Planet API token.
 
     This function checks if the user has stored a valid Protected
@@ -49,7 +47,8 @@ def get_token(key="WDPA_KEY"):
                "recommended name WDPA_KEY.").format(sep="\n")
         return msg
 
-    response = requests.get("https://api.protectedplanet.net/test?token=" + wdpa_key)
+    response = requests.get("https://api.protectedplanet.net/"
+                            f"test?token={wdpa_key}", timeout=None)
 
     if response.status_code == 401:
         msg = ("Invalid WDPA API token. Please ensure that:{sep}"
