@@ -109,16 +109,14 @@
 <span class="c1"># ==============================================================================</span>
 
 <span class="c1"># Import</span>
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span>  <span class="c1"># Python 3 compatibility</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 
 
 <span class="c1"># get_token()</span>
 <div class="viewcode-block" id="get_token">
-<a class="viewcode-back" href="../../reference.html#pywdpa.get_token.get_token">[docs]</a>
+<a class="viewcode-back" href="../../reference.html#pywdpa.get_token">[docs]</a>
 <span class="k">def</span> <span class="nf">get_token</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s2">&quot;WDPA_KEY&quot;</span><span class="p">):</span>
-
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Check Protected Planet API token.</span>
 
 <span class="sd">    This function checks if the user has stored a valid Protected</span>
@@ -150,7 +148,8 @@
                <span class="s2">&quot;recommended name WDPA_KEY.&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">msg</span>
 
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://api.protectedplanet.net/test?token=&quot;</span> <span class="o">+</span> <span class="n">wdpa_key</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://api.protectedplanet.net/&quot;</span>
+                            <span class="sa">f</span><span class="s2">&quot;test?token=</span><span class="si">{</span><span class="n">wdpa_key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">401</span><span class="p">:</span>
         <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Invalid WDPA API token. Please ensure that:</span><span class="si">{sep}</span><span class="s2">&quot;</span>
@@ -176,7 +175,7 @@
     <div class="clearer"></div>
   </div>
     <div class="footer">
-      &#169;2020, Ghislain Vieilledent.
+      &#169;2024, Cirad.
       
       |
       Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>

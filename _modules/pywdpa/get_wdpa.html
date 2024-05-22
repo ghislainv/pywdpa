@@ -109,7 +109,6 @@
 <span class="c1"># ==============================================================================</span>
 
 <span class="c1"># Import</span>
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span>  <span class="c1"># Python 3 compatibility</span>
 <span class="kn">import</span> <span class="nn">os</span>
 
 <span class="kn">import</span> <span class="nn">json</span>
@@ -119,13 +118,13 @@
 
 <span class="kn">from</span> <span class="nn">.get_token</span> <span class="kn">import</span> <span class="n">get_token</span>
 
-<span class="c1"># get_wdpa()</span>
-
 
 <div class="viewcode-block" id="get_wdpa">
-<a class="viewcode-back" href="../../reference.html#pywdpa.get_wdpa.get_wdpa">[docs]</a>
+<a class="viewcode-back" href="../../reference.html#pywdpa.get_wdpa">[docs]</a>
 <span class="k">def</span> <span class="nf">get_wdpa</span><span class="p">(</span><span class="n">iso3</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;This function downloads protected areas for one country using the</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get protected areas for a country from WDPA.</span>
+
+<span class="sd">    This function downloads protected areas for one country using the</span>
 <span class="sd">    WDPA API. Protected areas defined by a point are not</span>
 <span class="sd">    considered. The shapefile is written on the hard drive (in the</span>
 <span class="sd">    current directory).</span>
@@ -141,7 +140,7 @@
     <span class="n">category</span> <span class="o">=</span> <span class="s2">&quot;v3/countries/&quot;</span>
     <span class="n">wdpa_token</span> <span class="o">=</span> <span class="n">get_token</span><span class="p">()</span>
     <span class="n">request</span> <span class="o">=</span> <span class="n">base_url</span> <span class="o">+</span> <span class="n">category</span> <span class="o">+</span> <span class="n">iso3</span> <span class="o">+</span> <span class="s2">&quot;?token=&quot;</span> <span class="o">+</span> <span class="n">wdpa_token</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">404</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">&quot;Invalid ISO-3 code&quot;</span>
@@ -186,7 +185,7 @@
                  <span class="n">iso3</span><span class="p">,</span> <span class="s2">&quot;&amp;per_page=&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="s2">&quot;&amp;page=&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
             <span class="p">)</span>
 
-            <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
             <span class="n">response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
             <span class="n">response</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;protected_areas&quot;</span><span class="p">]</span>
 
@@ -211,8 +210,8 @@
                 <span class="c1"># If polygon, add feature</span>
                 <span class="k">if</span> <span class="n">g</span><span class="o">.</span><span class="n">GetGeometryName</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;POLYGON&quot;</span><span class="p">,</span> <span class="s2">&quot;MULTIPOLYGON&quot;</span><span class="p">]:</span>
                     <span class="c1"># Create feature with geometry and attributes</span>
-                    <span class="n">featureDefn</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetLayerDefn</span><span class="p">()</span>
-                    <span class="n">feature</span> <span class="o">=</span> <span class="n">ogr</span><span class="o">.</span><span class="n">Feature</span><span class="p">(</span><span class="n">featureDefn</span><span class="p">)</span>
+                    <span class="n">feature_defn</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">GetLayerDefn</span><span class="p">()</span>
+                    <span class="n">feature</span> <span class="o">=</span> <span class="n">ogr</span><span class="o">.</span><span class="n">Feature</span><span class="p">(</span><span class="n">feature_defn</span><span class="p">)</span>
                     <span class="n">feature</span><span class="o">.</span><span class="n">SetGeometry</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
                     <span class="n">feature</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s2">&quot;wdpa_id&quot;</span><span class="p">,</span> <span class="n">pa</span><span class="p">[</span><span class="s2">&quot;wdpa_id&quot;</span><span class="p">])</span>
                     <span class="n">feature</span><span class="o">.</span><span class="n">SetField</span><span class="p">(</span><span class="s2">&quot;pa_name&quot;</span><span class="p">,</span> <span class="n">pa</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
@@ -248,7 +247,7 @@
     <div class="clearer"></div>
   </div>
     <div class="footer">
-      &#169;2020, Ghislain Vieilledent.
+      &#169;2024, Cirad.
       
       |
       Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>

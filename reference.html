@@ -59,8 +59,8 @@
 <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/get_started.html">Get started</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Python API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-pywdpa.get_token">get_token</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-pywdpa.get_wdpa">get_wdpa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-token">get_token</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-wdpa">get_wdpa</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="indices.html">Indices and tables</a></li>
@@ -105,11 +105,11 @@
             
   <section id="python-api">
 <h1>Python API<a class="headerlink" href="#python-api" title="Link to this heading">¶</a></h1>
-<section id="module-pywdpa.get_token">
-<span id="get-token"></span><h2>get_token<a class="headerlink" href="#module-pywdpa.get_token" title="Link to this heading">¶</a></h2>
+<section id="get-token">
+<h2>get_token<a class="headerlink" href="#get-token" title="Link to this heading">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="pywdpa.get_token.get_token">
-<span class="sig-name descname"><span class="pre">get_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'WDPA_KEY'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pywdpa/get_token.html#get_token"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pywdpa.get_token.get_token" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pywdpa.get_token">
+<span class="sig-name descname"><span class="pre">get_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'WDPA_KEY'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pywdpa/get_token.html#get_token"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pywdpa.get_token" title="Link to this definition">¶</a></dt>
 <dd><p>Check Protected Planet API token.</p>
 <p>This function checks if the user has stored a valid Protected
 Planet API token as an environment variable file under the
@@ -134,12 +134,13 @@ python-dotenv: <a class="reference external" href="https://github.com/theskumar/
 </dd></dl>
 
 </section>
-<section id="module-pywdpa.get_wdpa">
-<span id="get-wdpa"></span><h2>get_wdpa<a class="headerlink" href="#module-pywdpa.get_wdpa" title="Link to this heading">¶</a></h2>
+<section id="get-wdpa">
+<h2>get_wdpa<a class="headerlink" href="#get-wdpa" title="Link to this heading">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="pywdpa.get_wdpa.get_wdpa">
-<span class="sig-name descname"><span class="pre">get_wdpa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iso3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pywdpa/get_wdpa.html#get_wdpa"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pywdpa.get_wdpa.get_wdpa" title="Link to this definition">¶</a></dt>
-<dd><p>This function downloads protected areas for one country using the
+<dt class="sig sig-object py" id="pywdpa.get_wdpa">
+<span class="sig-name descname"><span class="pre">get_wdpa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iso3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pywdpa/get_wdpa.html#get_wdpa"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pywdpa.get_wdpa" title="Link to this definition">¶</a></dt>
+<dd><p>Get protected areas for a country from WDPA.</p>
+<p>This function downloads protected areas for one country using the
 WDPA API. Protected areas defined by a point are not
 considered. The shapefile is written on the hard drive (in the
 current directory).</p>
@@ -164,7 +165,7 @@ current directory).</p>
     <div class="clearer"></div>
   </div>
     <div class="footer">
-      &#169;2020, Ghislain Vieilledent.
+      &#169;2024, Cirad.
       
       |
       Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
