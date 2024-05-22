@@ -52,8 +52,7 @@ Planet Materials in any derived form or format:
 
 
 For further details on terms and conditions of the WDPA usage, please
-visit the page:
-`<https://www.protectedplanet.net/c/terms-and-conditions>`_.
+visit the page: `<https://www.protectedplanet.net/en/legal>`_.
 
 Prerequisites
 =============
