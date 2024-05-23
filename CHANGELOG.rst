@@ -1,6 +1,12 @@
 Changelog
 *********
 
+pywdpa 0.1.6
+============
+
+* Adding workflow for GitHub pages.
+* Website update.
+
 pywdpa 0.1.5
 ============
 
@@ -9,9 +15,9 @@ pywdpa 0.1.5
 pywdpa 0.1.4
 ============
 
-* Correcting a bug to include multipolygons
-* Get started notebook
-* Web-site update
+* Correcting a bug to include multipolygons.
+* Get started notebook.
+* Website update.
 
 pywdpa 0.1.2 to 0.1.3
 =====================

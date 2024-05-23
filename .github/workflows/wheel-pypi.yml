@@ -4,14 +4,11 @@
 
 name: Build wheel and upload to PyPI
   
-# Publish when a (published) GitHub Release is created
+# When pushing with a tag (i.e. new version)
 on:
   push:
-    branches:
-    - master
     tags:
-    - "v*"
-  release:
+    - "*"
 
 jobs:
 
@@ -61,7 +58,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         name: Install Python
         with:
@@ -101,16 +97,17 @@ jobs:
     name: Upload to PyPI
     needs: [dist_check]
     runs-on: ubuntu-latest
-    # upload to PyPI on every tag starting with 'v'
-    if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags/v')
+    if: contains(${{ needs.check.outputs.branch }}, 'master')
+    environment:
+      name: pypi
+      url: https://pypi.org/p/pywdpa
+    permissions:
+      id-token: write  # Mandatory for trusted publishing.
     steps:
       - uses: actions/download-artifact@v3
         with:
           name: artifact
           path: dist
-      - uses: pypa/gh-action-pypi-publish@master
-        with:
-          user: __token__
-          password: ${{ secrets.pypi_password }}
+      - uses: pypa/gh-action-pypi-publish@release/v1
 
 # End
