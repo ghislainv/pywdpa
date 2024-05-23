@@ -57,6 +57,9 @@ visit the page: `<https://www.protectedplanet.net/en/legal>`_.
 Prerequisites
 =============
 
+Access to Protected Planet API
+------------------------------
+
 This package uses the Protected Planet API to access data on world
 protected areas. You must first have obtained a Personal API Token by
 filling in the form available at
@@ -65,30 +68,72 @@ environment variable (we recommend using the name ``WDPA_KEY``\ )
 using either the command ``os.environ["WDPA_KEY"]="your_token"`` or
 `python-dotenv <https://github.com/theskumar/python-dotenv>`_.
 
+GDAL
+----
+
+GDAL must be installed on your system.
+
+To install GDAL on Windows, use the `OSGeo4W <https://trac.osgeo.org/osgeo4w/>`_ network installer. OSGeo4W is a binary distribution of a broad set of open source geospatial software for Windows environments (Windows 11 down to 7). Select *Express Install* and install GDAL. Several Gb of space will be needed on disk to install this programs. This will also install *OSGeo4W Shell* to execute command lines.
+
+To install GDAL on other systems, use your package manager, for example ``apt`` for Debian/Ubuntu Linux distributions.
+
+.. code:: shell
+
+    sudo apt update
+    sudo apt install gdal-bin libgdal-dev
+
+After installing GDAL, you can test the installation by running ``gdalinfo --version`` in the command prompt or terminal, which should display the installed GDAL version.
+
+
 Installation
 ============
 
-The easiest way to install the ``pywdpa`` Python package is via `pip <https://pip.pypa.io/en/stable/>`_:
+The easiest way to install the ``pywdpa`` Python package is via `pip <https://pip.pypa.io/en/stable/>`_ in the *OSGeo4W Shell* for Windows or in a virtual environment for Linux.
 
-.. code-block:: bash
+For Linux, create and activate a virtual environment before install ``pywdpa`` with ``pip``:
 
-   $ # For version on PyPI
-   $ python -m pip install pywdpa
+.. code-block:: shell
 
-or 
+   cd ~
+   # Create a directory for virtual environments
+   mkdir venvs
+   # Create the virtual environment with venv
+   python3 -m venv ~/venvs/venv-pywdpa
+   # Activate (start) the virtual environment
+   source ~/venvs/venv-pywdpa/bin/activate
 
-.. code-block:: bash
+Install Python dependencies and ``pywdpa`` in the *OSGeo4W Shell* or in the newly created virtual environment:
+   
+.. code-block:: shell
+   
+   # Upgrade pip, setuptools, and wheel
+   python3 -m pip install --upgrade pip setuptools wheel
+   # Install numpy
+   python3 -m numpy
+   # Install gdal Python bindings (the correct version)
+   python3 -m pip install gdal==$(gdal-config --version)
+   # Install pywdpa. This will install all other dependencies
+   python3 -m pip install pywdpa
 
-   $ # For development version on GitHub
-   $ python -m pip install https://github.com/ghislainv/pywdpa/archive/master.zip
+If you want to install the development version of ``pywdpa``, replace the last line with:
 
-but you can also install ``pywdpa`` executing the ``setup.py`` file:
+.. code-block:: shell
 
-.. code-block:: bash
+   python3 -m pip install https://github.com/ghislainv/pywdpa/archive/master.zip
 
-   $ git clone https://github.com/ghislainv/pywdpa
-   $ cd pywdpa
-   $ python setup.py install
+To deactivate and delete the virtual environment:
+
+.. code-block:: shell
+		
+   deactivate
+   rm -R ~/venvs/venv-pywdpa # Just remove the repository
+
+In case of problem while installing GDAL Python bindings, try the following command:
+
+.. code-block:: shell
+		
+   python3 -m pip install  --no-cache-dir --force-reinstall gdal==$(gdal-config --version)
+
 
 Contributing
 ============
